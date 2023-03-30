@@ -3,12 +3,12 @@ from .models import Category, Product
 
 
 def index(request):
-    context = {'title': 'Что происходит?'}
+    context = {'title': 'Main title'}
     return render(request, template_name='products/index.html', context=context)
 
 
 def products(request):
-    context = {'title': 'Ya samy pizdatui',
+    context = {'title': 'Title',
             'products': Product.objects.all(),
             'category': Category.objects.all()}
     return render(request, template_name='products/products.html', context=context)
